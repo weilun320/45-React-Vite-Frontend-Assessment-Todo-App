@@ -1,0 +1,28 @@
+@media only screen and (min-width: 576px) {
+  .title {
+    font-size: 48px !important;
+  }
+
+  .home-button {
+    font-size: 1.25rem !important;
+  }
+}
+
+.home-bg {
+  height: 100vh;
+}
+
+.darken-bg {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.title {
+  font-size: 32px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 90vh;
+}
