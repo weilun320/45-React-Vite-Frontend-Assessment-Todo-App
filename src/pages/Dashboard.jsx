@@ -40,17 +40,21 @@ export default function Dashboard() {
     <Container>
       <h2 className="my-3">Dashboard</h2>
       <h4 className="my-3">Overall Todos Completion</h4>
-      <ProgressBar className="fs-5 mb-5" style={{ height: 32 }}>
+      <h5>
+        <span className="text-success">Completed: {completedTodos.length}</span>
+        <span className="text-danger ms-3">Uncompleted: {todos.todos.length - completedTodos.length}</span>
+      </h5>
+      <ProgressBar className="fs-6 mb-5" style={{ height: 28 }}>
         <ProgressBar
           variant="success"
           now={completedTodosCount}
-          label={"Completed: " + completedTodos.length}
+          label={`${completedTodosCount}%`}
           key={1}
         />
         <ProgressBar
           variant="danger"
           now={uncompletedTodosCount}
-          label={"Uncompleted: " + (todos.todos.length - completedTodos.length)}
+          label={`${uncompletedTodosCount}%`}
           key={2}
         />
       </ProgressBar>
